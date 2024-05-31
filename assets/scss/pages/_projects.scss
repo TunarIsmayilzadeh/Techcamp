@@ -1,0 +1,119 @@
+.projects-page {
+  .projects-page-nav {
+    padding: 14px 0;
+    @include flex($align: center);
+    gap: 12px;
+
+    figure {
+      display: flex;
+    }
+    span {
+      @include font($size: 12px, $weight: 400, $line-height: 16px);
+      color: map-get($color_blue, 900);
+    }
+  }
+  .projects-page-main {
+    padding: 100px 0 120px 0;
+    @include flex($direction: column);
+    gap: 40px;
+    &__text {
+      text-align: center;
+      h1 {
+        @include font($size: 58px, $weight: 600, $line-height: 72px);
+        color: map-get($color_blue, 800);
+
+        @include tablet() {
+          @include font($size: 48px, $weight: 600, $line-height: 64px);
+
+          @include mobile() {
+            @include font($size: 34px, $weight: 600, $line-height: 40px);
+          }
+        }
+      }
+    }
+    &__cards {
+      @include flex($wrap: wrap);
+      gap: 20px;
+      @include mobile() {
+        @include flex($wrap: wrap);
+        gap: 20px;
+      }
+      .card-items {
+        width: calc((100% - 40px) / 2);
+        @include flex();
+        gap: 20px;
+        border: 1px solid map-get($color_blue, 100);
+        border-radius: 16px;
+        padding: 10px 10px 10px 24px;
+        @include mobile() {
+          width: 100%;
+          @include flex($direction: column);
+          padding: 20px;
+          margin: 0;
+        }
+        &:hover {
+          border: 1px solid map-get($color_blue, 500);
+        }
+        &:hover svg path {
+          fill: map-get($color_blue2, 500);
+          transition: all 0.3s ease;
+        }
+        .items-left {
+          width: 40%;
+          @include flex($justify: space-between, $direction: column);
+          @include mobile() {
+            width: 100%;
+            @include flex($direction: column);
+            gap: 40px;
+          }
+
+          p {
+            @include font($weight: 500, $line-height: 24px);
+            color: map-get($color_blue, 600);
+          }
+        }
+        .items-right {
+          width: 60%;
+          overflow: hidden;
+
+          @include mobile() {
+            width: 100%;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      .mobile-none {
+        @include mobile() {
+          display: none;
+        }
+      }
+    }
+
+    &__btn {
+      button {
+        padding: 16px 72px;
+        border: 1px solid map-get($color_blue, 500);
+        background: none;
+        border-radius: 8px;
+        width: 100%;
+
+        &:hover {
+          background-color: map-get($color_blue, 500);
+          transition: all 0.3s ease;
+        }
+        &:hover a {
+          color: map-get($color_blue, 50);
+        }
+
+        a {
+          @include font($size: 20px, $weight: 500, $line-height: 24px);
+          color: map-get($color_blue, 500);
+        }
+      }
+    }
+  }
+}

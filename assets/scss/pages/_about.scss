@@ -1,0 +1,172 @@
+//section one
+
+.about-page {
+  .about-page-nav {
+    padding: 14px 0;
+    @include flex($align: center);
+    gap: 12px;
+
+    figure {
+      display: flex;
+    }
+    span {
+      @include font($size: 12px, $weight: 400, $line-height: 16px);
+      color: map-get($color_blue, 900);
+    }
+  }
+
+  .about-page-main {
+    position: relative;
+    padding: 100px 0 180px 0;
+    @include flex($direction: column, $justify: center, $align: center);
+    gap: 87px;
+    .about-page-head {
+      @include flex($direction: column, $align: center, $justify: center);
+      gap: 40px;
+      @include mobile() {
+        width: 100%;
+      }
+
+      h1 {
+        @include font($size: 58px, $weight: 600, $line-height: 72px);
+        color: map-get($color_blue, 800);
+
+        @include tablet() {
+          @include font($size: 48px, $weight: 600, $line-height: 64px);
+
+          @include mobile() {
+            @include font($size: 34px, $weight: 600, $line-height: 40px);
+          }
+        }
+      }
+      img {
+        width: 566px;
+        height: 640px;
+        @include mobile() {
+          width: 344px;
+          height: 390px;
+        }
+      }
+    }
+    .about-page-body {
+      text-align: center;
+      max-width: 891px;
+
+      p {
+        @include font($weight: 400);
+        color: map-get($color_blue, 900);
+
+        @include tablet() {
+          @include font($size: 14px, $weight: 400, $line-height: 24px);
+        }
+
+        @include mobile() {
+          @include font($size: 14px, $weight: 400, $line-height: 24px);
+        }
+      }
+    }
+
+    .about-page-line {
+      position: absolute;
+      left: 16%;
+      top: 16%;
+
+      @include tablet(1400px) {
+        position: absolute;
+        left: 7%;
+        top: 16%;
+      }
+      @include tablet() {
+        position: absolute;
+        left: 0;
+        top: 16%;
+      }
+      @include mobile() {
+        display: none;
+      }
+    }
+    .about-page-line2 {
+      position: absolute;
+      right: 14%;
+      bottom: 47%;
+      rotate: 180deg;
+
+      @include tablet(1400px) {
+        position: absolute;
+        right: 7%;
+        bottom: 47%;
+      }
+      @include tablet() {
+        position: absolute;
+        right: 0;
+        bottom: 47%;
+      }
+      @include mobile() {
+        display: none;
+      }
+    }
+  }
+}
+
+//section two
+
+.advantage {
+  padding-bottom: 120px;
+  .advantage-main {
+    @include flex($direction: column, $justify: center);
+    gap: 60px;
+    &__text {
+      text-align: center;
+
+      span {
+        @include font($weight: 400, $line-height: 24px);
+        color: map-get($color_blue, 500);
+      }
+      h3 {
+        @include font($size: 34px, $weight: 600, $line-height: 40px);
+        color: map-get($color_blue, 900);
+        margin-top: 12px;
+      }
+    }
+
+    &__box {
+      @include flex($wrap: wrap);
+      gap: 24px;
+      margin-bottom: 120px;
+      @include mobile() {
+        @include flex($direction: column);
+        gap: 60px;
+        margin-bottom: 0;
+      }
+      @include tablet() {
+        margin-bottom: 60px;
+      }
+
+      .advantage-box-items {
+        width: calc((100% - 48px) / 3);
+
+        figure {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        .box-items-text {
+          text-align: center;
+
+          h5 {
+            @include font($size: 20px, $weight: 500);
+            color: map-get($color_blue, 900);
+            margin-bottom: 10px;
+          }
+          p {
+            @include font($size: 14px, $weight: 400, $line-height: 24px);
+            color: map-get($color_blue, 500);
+          }
+        }
+
+        @include mobile() {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

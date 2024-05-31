@@ -1,0 +1,50 @@
+header {
+  padding: 24px 0;
+  border-bottom: 1px solid map-get($color_blue, 200);
+  .logo svg {
+    @include mobile() {
+      width: 147px;
+      height: 28px;
+    }
+  }
+  nav {
+    @include flex($justify: space-between, $align: center);
+
+    .burger__menu {
+      display: none;
+
+      @include tablet($maxWidth: 1030px) {
+        display: initial;
+      }
+    }
+  }
+  .navbar {
+    @include flex($justify: space-between);
+  }
+  .nav-list {
+    height: 100%;
+    @include flex($justify: space-between, $align: center);
+    gap: 40px;
+
+    @include tablet($maxWidth: 1030px) {
+      display: none;
+    }
+
+    li {
+      @include flex($justify: center, $align: center);
+    }
+
+    li a {
+      color: map-get($color_grey, 500);
+      @include font($weight: 500, $line-height: 24px);
+
+      &:hover {
+        color: map-get($color_blue, 500);
+
+        svg path {
+          stroke: #0000ea;
+        }
+      }
+    }
+  }
+}

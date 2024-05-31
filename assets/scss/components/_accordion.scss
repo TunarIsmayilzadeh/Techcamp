@@ -1,0 +1,37 @@
+.accordion-menu {
+  &.active {
+    transform: translateX(0);
+  }
+
+  padding: 18px 22px 51px 20px;
+  background-color: map-get($color_blue, 800);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  &__wrp {
+    ul {
+      @include flex($direction: column);
+      gap: 24px;
+      span {
+        @include font($size: 24px, $weight: 500, $line-height: 32px);
+        color: map-get($color_blue, 50);
+      }
+      a {
+        @include font($size: 20px, $weight: 400, $line-height: 28px);
+        color: map-get($color_blue, 100);
+      }
+    }
+  }
+  &__header {
+    @include flex($direction: column);
+    gap: 52px;
+  }
+  .close {
+    @include flex($justify: space-between);
+  }
+}

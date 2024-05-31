@@ -1,0 +1,723 @@
+//section one
+.header-banner {
+  padding-top: 32px;
+  &__main {
+    position: relative;
+    background-image: url(/assets/images/Vector.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include flex($align: center, $justify: center, $direction: column);
+    gap: 60px;
+    padding: 88px 0 83px 0;
+    @include mobile() {
+      padding: 88px 20px 83px 20px;
+    }
+  }
+  &__title {
+    text-align: center;
+    width: 45%;
+    @include mobile() {
+      width: 100%;
+    }
+    h1 {
+      @include font($size: 48px, $weight: 600, $line-height: 64px);
+      color: map-get($color_blue, 700);
+      margin-bottom: 20px;
+      @include mobile() {
+        @include font($size: 34px, $weight: 600, $line-height: 40px);
+      }
+    }
+    span {
+      @include font($size: 34px, $weight: 400, $line-height: 40px);
+      color: map-get($color_blue, 700);
+      @include mobile() {
+        @include font($size: 20px, $weight: 400, $line-height: 28px);
+      }
+    }
+  }
+  &__images {
+    @include flex($direction: column, $align: center, $justify: center);
+    gap: 40px;
+
+    img {
+      @include mobile() {
+        width: 335px;
+        height: 233px;
+      }
+    }
+
+    a{
+      padding: 16px 72px;
+      background-color: map-get($color_blue2, 500);
+      border: none;
+      border-radius: 8px; 
+      color: map-get($color_blue, 700);
+      @include font($size: 20px, $weight: 500, $line-height: 24px);
+
+      &:hover {
+        transition: all 0.3s ease;
+        background-color: map-get($color_blue2, 100);
+      }
+    }
+  }
+
+  &__svg {
+    position: absolute;
+  }
+  .star-1 {
+    top: 23%;
+    left: 7%;
+  }
+  .star-2 {
+    top: 27%;
+    left: 90%;
+  }
+  .star-3 {
+    top: 39%;
+    left: 70%;
+    @include mobile() {
+      top: 73%;
+    }
+  }
+  .star-4 {
+    bottom: 15%;
+    left: 76%;
+  }
+  .star-5 {
+    left: 25%;
+    bottom: 40%;
+    @include tablet() {
+      left: 18%;
+    }
+  }
+  .star-6 {
+    left: 15%;
+    bottom: 18%;
+  }
+  .star-4,
+  .star-5,
+  .star-6 {
+    @include mobile() {
+      display: none;
+    }
+  }
+  .line {
+    bottom: 5%;
+    left: 35%;
+    @include mobile() {
+      bottom: 0;
+    }
+    @include tablet() {
+      bottom: 0;
+      left: 43%;
+    }
+  }
+}
+
+//section two
+.educational-programs {
+  padding: 140px 0;
+
+  .educational-programs-main {
+    @include flex($direction: column);
+    gap: 40px;
+  }
+  &__title {
+    text-align: center;
+
+    h2 {
+      @include font($size: 58px, $weight: 600, $line-height: 72px);
+      color: map-get($color_blue, 800);
+      @include tablet() {
+        @include font($size: 46px, $weight: 600, $line-height: 64px);
+      }
+    }
+  }
+  &__cards {
+    @include flex($justify: center, $align: center);
+    gap: 20px;
+    @include mobile() {
+      @include flex($justify: space-between, $direction: column);
+    }
+
+    .programming-card {
+      border: 2px solid map-get($color_blue, 50);
+      border-radius: 16px;
+      padding: 14px 14px 24px 24px;
+      width: calc((100% - 40px) / 3);
+      @include flex($justify: space-between, $direction: column);
+      gap: 162px;
+      @include mobile() {
+        width: 100%;
+      }
+      &:hover a {
+        background-color: map-get($color_blue2, 50);
+      }
+      &:hover .card-first-svg {
+        display: none;
+      }
+      &:hover .card-arrow-svg {
+        display: initial;
+      }
+      &:hover {
+        border: 2px solid map-get($color_blue, 700);
+      }
+
+      &__head {
+        @include flex($justify: flex-end, $align: center);
+
+        a {
+          padding: 10px;
+          background-color: map-get($color_blue, 50);
+          border-radius: 8px;
+        }
+        .card-arrow-svg {
+          display: none;
+        }
+      }
+
+      &__footer {
+        @include flex($direction: column);
+        gap: 8px;
+
+        span {
+          @include font($weight: 400, $line-height: 24px);
+          color: map-get($color_blue, 600);
+
+          @include tablet() {
+            @include font($size: 14px, $weight: 400, $line-height: 24px);
+          }
+          @include mobile() {
+            @include font($weight: 400, $line-height: 24px);
+          }
+        }
+
+        h5 {
+          @include font($size: 24px, $weight: 600, $line-height: 32px);
+          color: map-get($color_blue, 800);
+          @include tablet() {
+            @include font($size: 20px, $weight: 600, $line-height: 28px);
+          }
+        }
+      }
+    }
+  }
+  &__btn {
+    a {
+      padding: 16px 72px;
+      border: 1px solid map-get($color_blue, 500);
+      border-radius: 8px;
+      color: map-get($color_blue, 500);
+      @include font($size: 20px, $weight: 500, $line-height: 24px);
+      display:inline-block;
+      width: 100%;
+      text-align: center;
+
+      &:hover {
+        background-color: map-get($color_blue, 500);
+        transition: all 0.3s ease;
+        color: map-get($color_blue, 50);
+      }
+    }
+  }
+}
+
+//section three
+
+.about {
+  padding: 31px 20px 0 100px;
+  background-image: url(/assets/images/bc-img.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left 0;
+
+  @include mobile() {
+    padding: 80px 20px 0 20px;
+  }
+
+  .about-main {
+    @include flex($justify: space-between);
+
+    @include tablet() {
+      position: relative;
+    }
+
+    @include mobile() {
+      @include flex($direction: column);
+    }
+
+    &__imgs {
+      position: relative;
+      width: 60%;
+      @include flex($justify: flex-end, $align: end);
+      @include tablet() {
+        width: 60%;
+      }
+      @include mobile() {
+        width: 100%;
+      }
+
+      img {
+        @include tablet(1200px) {
+          width: 620px;
+          height: 650px;
+        }
+        @include tablet() {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .about-line svg {
+        position: absolute;
+        right: 90%;
+        top: 8%;
+
+        @include tablet() {
+          width: 74px;
+          height: 168px;
+        }
+        @include mobile() {
+          right: 95%;
+        }
+      }
+    }
+    &__text {
+      @include flex($align: end, $justify: flex-end);
+      width: 30%;
+      padding-bottom: 100px;
+      @include tablet() {
+        width: 40%;
+        padding-bottom: 80px;
+      }
+      @include mobile() {
+        width: 100%;
+      }
+
+      .context {
+        @include flex($direction: column, $align: start, $justify: flex-end);
+        gap: 32px;
+        height: 100%;
+        width: 100%;
+        @include mobile() {
+          @include flex($direction: column, $justify: flex-end);
+        }
+
+        h2 {
+          @include font($size: 58px, $weight: 600, $line-height: 72px);
+          color: map-get($color_blue, 900);
+          @include tablet() {
+            @include font($size: 48px, $weight: 600, $line-height: 64px);
+          }
+          @include mobile() {
+            @include font($size: 34px, $weight: 600, $line-height: 40px);
+          }
+        }
+        p {
+          @include font($weight: 400);
+          color: map-get($color_blue, 700);
+          @include tablet() {
+            @include font($size: 14px, $weight: 400, $line-height: 24px);
+          }
+        }
+        button {
+          padding: 16px 72px;
+          border-radius: 8px;
+          border: none;
+          background-color: map-get($color_blue2, 500);
+          a {
+            @include font($size: 20px, $weight: 500, $line-height: 24px);
+            color: map-get($color_blue, 700);
+          }
+          &:hover {
+            transition: all 0.3s ease;
+            background-color: map-get($color_blue2, 100);
+          }
+        }
+      }
+    }
+  }
+}
+
+//section four
+
+.projects {
+  padding: 120px 0;
+  .projects-main {
+    @include flex($direction: column);
+    gap: 40px;
+
+    &__text {
+      text-align: center;
+
+      h2 {
+        @include font($size: 58px, $weight: 600, $line-height: 72px);
+        color: map-get($color_blue, 800);
+
+        @include tablet() {
+          @include font($size: 48px, $weight: 600, $line-height: 64px);
+        }
+        @include mobile() {
+          @include font($size: 34px, $weight: 600, $line-height: 40px);
+        }
+      }
+    }
+    .projects-slider {
+      @include mobile() {
+        @include flex($direction: column);
+      }
+      &__items {
+        margin-right: 20px;
+        @include flex();
+        gap: 20px;
+        border: 1px solid map-get($color_blue, 100);
+        border-radius: 16px;
+        padding: 10px 10px 10px 24px;
+        @include mobile() {
+          width: 100%;
+          @include flex($direction: column);
+          padding: 20px;
+          margin: 0;
+        }
+        &:hover {
+          border: 1px solid map-get($color_blue, 500);
+        }
+        &:hover svg path {
+          fill: map-get($color_blue2, 500);
+          transition: all 0.3s ease;
+        }
+        .items-left {
+          width: 40%;
+          @include flex($justify: space-between, $direction: column);
+          @include mobile() {
+            width: 100%;
+            @include flex($direction: column);
+            gap: 40px;
+          }
+
+          p {
+            @include font($weight: 500, $line-height: 24px);
+            color: map-get($color_blue, 600);
+          }
+        }
+        .items-right {
+          width: 60%;
+          overflow: hidden;
+
+          @include mobile() {
+            width: 100%;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            // @include tablet() {
+            //   width: 216px;
+            //   height: 232px;
+            // }
+          }
+        }
+      }
+    }
+    &__btn {
+      @include flex($justify: space-between, $align: center);
+
+      button {
+        padding: 10px 48px;
+        border: 1px solid map-get($color_blue, 500);
+        background: none;
+        border-radius: 8px;
+
+        a {
+          @include font($weight: 500, $line-height: 24px);
+          color: map-get($color_blue, 500);
+        }
+
+        &:hover {
+          transition: all 0.3s ease;
+          background-color: map-get($color_blue, 500);
+        }
+        &:hover a {
+          color: map-get($color_blue, 50);
+        }
+      }
+    }
+    .projects-main__btn {
+      svg {
+        &:hover rect {
+          stroke: map-get($color_blue, 200);
+        }
+        &:hover path {
+          stroke: map-get($color_blue, 500);
+        }
+      }
+    }
+  }
+}
+
+//section five
+
+.regions {
+  padding-bottom: 80px;
+  .regions-main {
+    @include flex($justify: center, $align: center, $direction: column);
+    gap: 80px;
+    &__text {
+      max-width: 440px;
+      text-align: center;
+      @include flex($direction: column);
+      gap: 40px;
+      .text-head {
+        @include flex($direction: column);
+        gap: 20px;
+
+        h2 {
+          @include font($size: 58px, $weight: 600, $line-height: 72px);
+          color: map-get($color_blue, 800);
+          @include tablet() {
+            @include font($size: 48px, $weight: 600, $line-height: 64px);
+          }
+          @include mobile() {
+            @include font($size: 34px, $weight: 600, $line-height: 40px);
+          }
+
+          span {
+            color: map-get($color_blue, 500);
+          }
+        }
+        p {
+          @include font($size: 14px, $weight: 400, $line-height: 24px);
+          color: map-get($color_blue, 800);
+        }
+        a {
+          @include font($weight: 500, $line-height: 24px);
+          color: map-get($color_blue, 500);
+          text-decoration: underline;
+          &:hover {
+            transition: all 0.3s ease;
+            color: map-get($color_blue2, 600);
+          }
+        }
+      }
+      .text-body {
+        @include flex($align: center);
+        gap: 10px;
+        .text-body-left {
+          width: 73%;
+          .custom-select {
+            position: relative;
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid map-get($color_blue, 100);
+            border-radius: 8px;
+            outline: none;
+            color: map-get($color_blue, 100);
+            @include font($size: 14px, $weight: 400, $line-height: 24px);
+            @include box-shadow(
+              $vertical: 1px,
+              $blur: 2px,
+              $color: rgba(16, 24, 40, 0.05)
+            );
+          }
+
+          .custom-select select {
+            display: none; /*hide original SELECT element:*/
+          }
+
+          .select-selected {
+            background-color: #fff;
+            @include flex();
+            position: relative;
+            &:after {
+              position: absolute;
+              content: url(/assets/images/chevron-down.svg);
+              right: 0;
+              top: 17%;
+              @include flex($align: center, $justify: center);
+            }
+            &.select-arrow-active {
+              &::after {
+                transform: rotate(180deg);
+                position: absolute;
+                right: 0;
+                bottom: 17%;
+              }
+            }
+          }
+          /*style the items (options), including the selected item:*/
+
+          /*style items (options):*/
+          .select-items {
+            position: absolute;
+            background-color: #fff;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            border: 1px solid map-get($color_blue, 100);
+            border-radius: 8px;
+
+            div {
+              position: relative;
+              padding: 10px 14px;
+              outline: none;
+              color: map-get($color_blue, 900);
+              @include font($size: 14px, $weight: 400, $line-height: 24px);
+              @include flex();
+
+              &:after {
+                position: absolute;
+                content: url(/assets/images/check.svg);
+                top: 14px;
+                right: 10%;
+                width: 0;
+                height: 0;
+                display: none;
+              }
+            }
+            .same-as-selected {
+              position: relative;
+              &:after {
+                position: absolute;
+                content: url(/assets/images/check.svg);
+                top: 14px;
+                right: 10%;
+                width: 0;
+                height: 0;
+                display: initial;
+              }
+            }
+          }
+
+          /*hide the items when the select box is closed:*/
+          .select-hide {
+            display: none;
+          }
+
+          .select-items div:hover,
+          .same-as-selected {
+            background-color: #e6e6fd;
+          }
+        }
+      }
+      .text-body-right {
+        width: 27%;
+        @include flex($justify: flex-start);
+        button {
+          padding: 10px 37px;
+          background-color: map-get($color_blue, 600);
+          border: none;
+          border-radius: 8px;
+          @include font($size: 14px, $weight: 400, $line-height: 24px);
+          &:hover {
+            transition: all 0.3s ease;
+            background-color: map-get($color_blue, 100);
+            color: map-get($color_blue, 800);
+          }
+
+          @include mobile() {
+            padding: 10px 22px;
+          }
+          .search-text {
+            color: map-get($color_blue, 50);
+            @include font($size: 14px, $weight: 400, $line-height: 24px);
+            @include mobile() {
+              display: none;
+            }
+          }
+          .search-btn {
+            display: none;
+
+            @include mobile() {
+              display: initial;
+              color: map-get($color_blue, 50);
+              @include font($size: 14px, $weight: 400, $line-height: 24px);
+            }
+          }
+        }
+      }
+    }
+    &__map {
+      figure {
+        position: relative;
+
+        @include mobile() {
+          width: 375px;
+          overflow-x: auto;
+        }
+
+        .hover-text {
+          position: absolute;
+          padding: 12px 16px;
+          background-color: #fff;
+          border: 1px solid map-get($color_blue, 50);
+          border-radius: 8px;
+          top: 19%;
+          left: 13%;
+          @include font($weight: 500, $line-height: 24px);
+          color: map-get($color_blue, 900);
+          display: none;
+          @include mobile() {
+            position: absolute;
+            top: 17%;
+            left: 28%;
+          }
+        }
+        .active {
+          display: initial;
+        }
+        .hover-region-circle {
+          position: absolute;
+          left: 18.2%;
+          top: 26.5%;
+          z-index: -1;
+          @include tablet() {
+            position: absolute;
+            left: 18.6%;
+            top: 26.2%;
+            z-index: -1;
+          }
+          @include mobile() {
+            position: absolute;
+            left: 43.7%;
+            top: 26.2%;
+            z-index: -1;
+          }
+        }
+        .hover-region-circle2 {
+          position: absolute;
+          z-index: -1;
+          left: 17.2%;
+          top: 25%;
+          @include tablet() {
+            position: absolute;
+            z-index: -1;
+            left: 17.5%;
+            top: 24.6%;
+          }
+          @include mobile() {
+            position: absolute;
+            z-index: -1;
+            left: 41%;
+            top: 24.6%;
+          }
+        }
+
+        .path-border {
+          fill: map-get($color_blue, 500);
+        } 
+      }
+
+      .main-svg {
+        @include tablet() {
+          width: 875px;
+          height: 648px;
+        }
+        .hover-region {
+          position: relative;
+          fill: map-get($color_blue, 500);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,174 @@
+.footer {
+  padding: 60px 0 37px 0;
+  background-color: map-get($color_blue, 900);
+
+  .footer-main {
+    @include flex($justify: space-between);
+    @include mobile() {
+      @include flex($direction: column);
+      gap: 40px;
+    }
+
+    .footer-main__logo {
+      @include mobile() {
+        width: 100%;
+      }
+      @include tablet() {
+        width: 40%;
+      }
+      @include flex($direction: column, $justify: space-between);
+      width: 24%;
+      gap: 30px;
+      svg {
+        @include mobile() {
+          width: 157px;
+          height: 29px;
+        }
+      }
+      .footer-main__text {
+        @include mobile() {
+          width: 100%;
+        }
+        p {
+          color: map-get($color_blue2, 50);
+          @include font($size: 12px, $weight: 400, $line-height: 16px);
+          @include mobile() {
+            @include font($size: 8px, $weight: 400, $line-height: 14px);
+          }
+        }
+      }
+
+      .footer-main__social {
+        @include mobile() {
+          display: none;
+        }
+        ul {
+          @include flex();
+          gap: 32px;
+        }
+      }
+    }
+
+    .footer-main__education {
+      @include flex($justify: space-between);
+      width: 38%;
+      @include mobile() {
+        display: none;
+      }
+      @include tablet() {
+        width: 50%;
+      }
+
+      .footer-main__list ul {
+        @include flex($direction: column);
+        gap: 8px;
+
+        li a {
+          color: map-get($color_blue, 200);
+          @include font($weight: 400, $line-height: 24px);
+
+          &:hover {
+            color: map-get($color_blue2, 200);
+          }
+        }
+
+        .active {
+          color: map-get($color_blue, 50);
+
+          &:hover {
+            color: map-get($color_blue2, 200);
+          }
+        }
+      }
+
+      .footer-main__about ul {
+        @include flex($direction: column);
+        gap: 14px;
+        li a {
+          color: map-get($color_blue, 200);
+          @include font($weight: 400, $line-height: 24px);
+
+          &:hover {
+            color: map-get($color_blue2, 200);
+          }
+        }
+
+        .active {
+          color: map-get($color_blue, 50);
+
+          &:hover {
+            color: map-get($color_blue2, 200);
+          }
+        }
+      }
+    }
+    .footer-main__education-responsive {
+      @include flex($justify: space-between);
+      display: none;
+      @include mobile() {
+        display: flex;
+      }
+
+      .edication-responsive-list {
+        @include flex($direction: column);
+        gap: 14px;
+        .footer-main__list ul {
+          @include flex($direction: column);
+          gap: 8px;
+
+          li a {
+            color: map-get($color_blue, 200);
+            @include font($weight: 400, $line-height: 24px);
+
+            &:hover {
+              color: map-get($color_blue2, 200);
+            }
+          }
+
+          .active {
+            color: map-get($color_blue, 50);
+
+            &:hover {
+              color: map-get($color_blue2, 200);
+            }
+          }
+        }
+
+        .footer-main__about ul {
+          @include flex($direction: column);
+          gap: 14px;
+
+          li a {
+            color: map-get($color_blue, 200);
+            @include font($weight: 400, $line-height: 24px);
+
+            &:hover {
+              color: map-get($color_blue2, 200);
+            }
+          }
+
+          .active {
+            color: map-get($color_blue, 50);
+
+            &:hover {
+              color: map-get($color_blue2, 200);
+            }
+          }
+        }
+      }
+      .footer-main__social-responsive ul {
+        @include flex($direction: column, $justify: space-between);
+        height: 100%;
+      }
+    }
+  }
+}
+
+.law {
+  padding: 14px 0;
+
+  a {
+    @include font($size: 12px, $weight: 400, $line-height: 24px);
+    color: map-get($color_blue, 900);
+  }
+}

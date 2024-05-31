@@ -1,0 +1,40 @@
+.star {
+  margin-bottom: 2px;
+}
+.slick-initialized .slick-slide {
+  display: flex;
+}
+.star-slider {
+  padding: 24px 0;
+  @include flex($align: center, $justify: space-between);
+  background-image: linear-gradient(
+    map-get($color_blue, 500),
+    map-get($color_blue, 800)
+  );
+  @include mobile() {
+    padding: 18px 0;
+  }
+
+  &__items {
+    @include flex($align: center, $justify: center);
+
+    svg {
+      @include mobile() {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  &__text {
+    height: 34.4px;
+    text-align: center;
+    span {
+      transform: translateX(50%);
+      color: map-get($color_blue2, 100);
+      @include font($weight: 500, $line-height: 24px);
+      @include mobile() {
+        @include font($size: 14px, $weight: 400, $line-height: 24px);
+      }
+    }
+  }
+}

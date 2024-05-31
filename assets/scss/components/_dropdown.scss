@@ -1,0 +1,88 @@
+.education {
+  position: relative;
+  height: 100%;
+
+  &:hover .education__main__drp {
+    display: flex;
+  }
+  &:hover svg {
+    transition: all 0.3s ease;
+    rotate: 180deg;
+  }
+
+  .education__main__drp {
+    position: absolute;
+    z-index: 4;
+    top: 38px;
+    left: 0;
+    @include box-shadow(
+      $horizontal: 0,
+      $vertical: 4px,
+      $spread: 6px,
+      $color: rgba(16, 24, 40, 0.08)
+    );
+    border: 1px solid map-get($color_blue, 50);
+    background-color: #fff;
+    border-radius: 12px;
+    display: none;
+    transition: all 0.3s ease;
+
+    .education__drp {
+      position: relative;
+      padding: 20px 0;
+
+      .cascade__drp {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        position: absolute;
+        z-index: 2;
+        left: 97%;
+        top: 0;
+        padding: 25px 60px 25px 25px;
+        @include box-shadow(
+          $horizontal: 0,
+          $vertical: 4px,
+          $spread: 6px,
+          $color: rgba(16, 24, 40, 0.08)
+        );
+        border: 1px solid map-get($color_blue, 50);
+        background-color: #fff;
+        border-radius: 12px;
+        display: none;
+        transition: all 0.2s ease;
+
+        li {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .education__drp__item {
+      display: flex;
+      cursor: pointer;
+      padding: 13px 26px;
+      @include font($weight: 500, $line-height: 24px);
+      &:hover {
+        background-color: map-get($color_blue, 50);
+      }
+
+      .drp-text {
+        @include flex($justify: space-between, $align: center);
+        width: 100%;
+        gap: 32px;
+        padding-left: 20px;
+      }
+    }
+
+    .cascade__main {
+      &:hover .cascade__drp {
+        display: flex;
+      }
+      &:hover .svg-rotate {
+        transition: all 0.3s ease;
+        rotate: 360deg;
+      }
+    }
+  }
+}

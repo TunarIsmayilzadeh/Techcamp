@@ -1,0 +1,73 @@
+.not-found {
+  position: relative;
+  .not-found-main {
+    height: 100vh;
+    background-image: url(/assets/images/not-found-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 90%;
+    @include flex($align: center, $justify: center);
+
+    &__body {
+      max-width: 590px;
+      @include flex($align: center, $justify: center, $direction: column);
+      gap: 40px;
+      @include mobile() {
+        width: 100%;
+      }
+
+      h1 {
+        @include font($size: 300px, $weight: 600, $line-height: 300px);
+        color: map-get($color_blue, 800);
+
+        @include mobile() {
+          @include font($size: 170px, $weight: 600, $line-height: 300px);
+        }
+      }
+
+      h5 {
+        @include font($size: 20px, $weight: 500);
+        color: map-get($color_blue, 800);
+      }
+
+      button {
+        padding: 12px 48px;
+        border: 1px solid map-get($color_blue, 500);
+        background: none;
+        border-radius: 8px;
+
+        &:hover {
+          border: 1px solid map-get($color_blue, 100);
+          background-color: map-get($color_blue, 100);
+          transition: all 0.3s ease;
+        }
+
+        &:hover a {
+          color: map-get($color_blue, 900);
+        }
+
+        a {
+          color: map-get($color_blue, 500);
+          @include font($weight: 500, $line-height: 20px);
+        }
+      }
+    }
+  }
+  .NF_star1 {
+    position: absolute;
+    left: 6.5%;
+    top: 40%;
+    @include mobile() {
+      left: 46%;
+      top: 16%;
+    }
+  }
+  .NF_star2 {
+    position: absolute;
+    right: 6.5%;
+    top: 40%;
+    @include mobile() {
+      display: none;
+    }
+  }
+}

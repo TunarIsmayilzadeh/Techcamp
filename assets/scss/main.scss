@@ -1,0 +1,35 @@
+// ABSTRACTS folder
+@import "./abstracts/colors";
+@import "./abstracts/mixins";
+@import "./abstracts/utilities";
+
+// BASE folder
+@import "./base/fonts";
+@import "./base/reset";
+@import "./base/global";
+@import "./base/container";
+
+// COMPONENTS foldersss
+@import "./components/dropdown";
+@import "./components/aside";
+@import "./components/slider";
+@import "./components/accordion";
+
+// LAYOUT folders
+@import "./layout/header";
+@import "./layout/footer";
+
+// PAGES folder
+@import "./pages/home";
+@import "./pages/not-found";
+@import "./pages/about";
+@import "./pages/projects";
+@import "./pages/projectName";
+@import "./pages/education";
+@import "./pages/design";
+@import "./pages/contact";
+// THEMES folder
+
+// UTILITIES folder
+
+// VENDORS folder
