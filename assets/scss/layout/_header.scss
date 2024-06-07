@@ -7,43 +7,53 @@ header {
       height: 28px;
     }
   }
-  nav {
-    @include flex($justify: space-between, $align: center);
 
-    .burger__menu {
-      display: none;
-
-      @include tablet($maxWidth: 1030px) {
-        display: initial;
-      }
-    }
-  }
   .navbar {
     @include flex($justify: space-between);
-  }
-  .nav-list {
-    height: 100%;
-    @include flex($justify: space-between, $align: center);
-    gap: 40px;
-
-    @include tablet($maxWidth: 1030px) {
-      display: none;
-    }
-
-    li {
-      @include flex($justify: center, $align: center);
-    }
-
-    li a {
-      color: map-get($color_grey, 500);
-      @include font($weight: 500, $line-height: 24px);
-
-      &:hover {
-        color: map-get($color_blue, 500);
-
-        svg path {
-          stroke: #0000ea;
+    nav {
+      @include flex($justify: space-between, $align: center);
+      &.page-nav{
+        li{
+          .nav-list-text.active{
+           color: map-get($color_grey,500);
+          }
+          .nav-list-text:not(.active){
+           opacity: 50%;
+           }
         }
+      }
+      .burger__menu {
+        display: none;
+  
+        @include tablet($maxWidth: 1030px) {
+          display: initial;
+        }
+      }
+      .nav-list {
+        height: 100%;
+        @include flex($justify: space-between, $align: center);
+        gap: 40px;
+    
+        @include tablet($maxWidth: 1030px) {
+          display: none;
+        }
+        li {
+          @include flex($justify: center, $align: center);
+          .nav-list-text{
+            color: map-get($color_grey, 500);
+            @include font($weight: 500, $line-height: 24px);
+            // opacity: 50%;
+           
+            &:hover {
+              color: map-get($color_blue, 500);
+      
+              svg path {
+                stroke: #0000ea;
+              }
+            }
+          }
+        }
+    
       }
     }
   }

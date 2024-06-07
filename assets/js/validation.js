@@ -47,6 +47,7 @@ $(document).ready(function () {
         },
         message: {
           required: "Boş buraxıla bilməz!",
+          minlength:"Minimum 5 simvol tələb olunur!",
           maxlength: "Maksimum 1000 simvol",
         },
       },

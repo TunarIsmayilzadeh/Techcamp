@@ -12,7 +12,7 @@
 
   .education__main__drp {
     position: absolute;
-    z-index: 4;
+    z-index: 999;
     top: 38px;
     left: 0;
     @include box-shadow(
@@ -31,6 +31,7 @@
       position: relative;
       padding: 20px 0;
 
+
       .cascade__drp {
         display: flex;
         flex-direction: column;
@@ -39,7 +40,7 @@
         z-index: 2;
         left: 97%;
         top: 0;
-        padding: 25px 60px 25px 25px;
+        padding: 25px 60px 25px 25px; 
         @include box-shadow(
           $horizontal: 0,
           $vertical: 4px,
@@ -53,7 +54,12 @@
         transition: all 0.2s ease;
 
         li {
+
           cursor: pointer;
+
+          // &:hover {
+          //   background-color: map-get($color_blue, 50);
+          // }
         }
       }
     }
@@ -62,7 +68,12 @@
       display: flex;
       cursor: pointer;
       padding: 13px 26px;
-      @include font($weight: 500, $line-height: 24px);
+     
+
+      a{
+        @include font($weight: 500, $line-height: 24px);
+        color: map-get($color_grey,500);
+      }
       &:hover {
         background-color: map-get($color_blue, 50);
       }
@@ -72,6 +83,7 @@
         width: 100%;
         gap: 32px;
         padding-left: 20px;
+
       }
     }
 

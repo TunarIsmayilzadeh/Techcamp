@@ -103,7 +103,7 @@
   }
   .line {
     bottom: 5%;
-    left: 35%;
+    left: 32%;
     @include mobile() {
       bottom: 0;
     }
@@ -270,7 +270,7 @@
       }
       .about-line svg {
         position: absolute;
-        right: 90%;
+        right: 95%;
         top: 8%;
 
         @include tablet() {

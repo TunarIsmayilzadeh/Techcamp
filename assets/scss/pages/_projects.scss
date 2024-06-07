@@ -10,6 +10,10 @@
     span {
       @include font($size: 12px, $weight: 400, $line-height: 16px);
       color: map-get($color_blue, 900);
+
+      &:hover{
+        cursor: pointer;
+      }
     }
   }
   .projects-page-main {
